@@ -21,12 +21,14 @@
   "license": "MIT",
   "author": "Stratos Pavlakis",
   "scripts": {
-    "build": "rimraf dist && cross-env NODE_ENV=production babel src -d dist -s",
+    "build": "cross-env NODE_ENV=production babel src -d dist -s",
     "dev": "nodemon src/index.js",
     "jsdocs": "jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint --fix src",
+    "prebuild": "rimraf dist",
+    "pretest": "rimraf reports/unit",
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest -c jest/config.unit.js"
   },
   "husky": {
     "hooks": {
@@ -59,6 +61,7 @@
     "@babel/preset-env": "7.6.2",
     "@commitlint/cli": "8.2.0",
     "@commitlint/config-conventional": "8.2.0",
+    "babel-jest": "24.9.0",
     "babel-plugin-module-resolver": "3.2.0",
     "cross-env": "6.0.3",
     "eslint": "6.5.1",
@@ -68,6 +71,8 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
     "husky": ">=1",
+    "jest": "24.9.0",
+    "jest-html-reporter": "2.6.2",
     "jsdoc": "3.6.3",
     "lint-staged": ">=8",
     "minami": "1.2.3",
