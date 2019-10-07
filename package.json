@@ -1,0 +1,27 @@
+{
+  "name": "cloud-native-hexagonal-node",
+  "version": "1.0.0",
+  "description": "A cloud native node microservice boilerplate based on the hexagonal architecture",
+  "keywords": [
+    "12-factor",
+    "boilerplate",
+    "clean-architecture",
+    "cloud-native",
+    "hexagonal-architecture",
+    "microservices",
+    "nodejs"
+  ],
+  "homepage": "https://github.com/th3hunt/cloud-native-hexagonal-node#readme",
+  "bugs": {
+    "url": "https://github.com/th3hunt/cloud-native-hexagonal-node/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/th3hunt/cloud-native-hexagonal-node.git"
+  },
+  "license": "MIT",
+  "author": "Stratos Pavlakis",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
