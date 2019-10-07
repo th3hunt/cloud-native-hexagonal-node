@@ -1683,6 +1683,11 @@ dot-prop@^4.1.0:
   dependencies:
     is-obj "^1.0.0"
 
+dotenv@8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.1.0.tgz#d811e178652bfb8a1e593c6dd704ec7e90d85ea2"
+  integrity sha512-GUE3gqcDCaMltj2++g6bRQ5rBJWtkWTmqmD0fo1RnnMuUqHNCt2oTPeDnS9n6fKYvlhn7AeBkb38lymBtWBQdA==
+
 duplexer3@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
@@ -1762,13 +1767,6 @@ eslint-config-prettier@6.4.0:
   integrity sha512-YrKucoFdc7SEko5Sxe4r6ixqXPDP1tunGw91POeZTTRKItf/AMFYt/YLEQtZMkR2LVpAVhcAcZgcWpm1oGPW7w==
   dependencies:
     get-stdin "^6.0.0"
-
-eslint-import-resolver-module-alias@0.1.0:
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/eslint-import-resolver-module-alias/-/eslint-import-resolver-module-alias-0.1.0.tgz#ea3f25777fa23f5b8ed9659f383292722e9460ca"
-  integrity sha512-SfB/IeYPkKKOGmNzP52RBLGSdNekYgg6+7uk3SR/FEMWELUBufcbdiZSxp4XBoTNmNTA/c7LblYcDuGslteijg==
-  dependencies:
-    resolve "^1.5.0"
 
 eslint-import-resolver-node@^0.3.2:
   version "0.3.2"
@@ -3243,11 +3241,6 @@ mkdirp@^0.5.0, mkdirp@^0.5.1:
   integrity sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
   dependencies:
     minimist "0.0.8"
-
-module-alias@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/module-alias/-/module-alias-2.2.2.tgz#151cdcecc24e25739ff0aa6e51e1c5716974c0e0"
-  integrity sha512-A/78XjoX2EmNvppVWEhM2oGk3x4lLxnkEA4jTbaK97QKSDjkIoOsKQlfylt/d3kKKi596Qy3NP5XrXJ6fZIC9Q==
 
 ms@2.0.0:
   version "2.0.0"
