@@ -5,6 +5,11 @@
     "prettier/prettier": ["error"],
     "no-console": "off"
   },
+  "settings": {
+    "import/resolver": {
+      "babel-module": {}
+    }
+  },
   "env": {
     "node": true,
     "jest": true,
