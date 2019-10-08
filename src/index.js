@@ -1,3 +1,4 @@
 import 'dotenv/config';
+import logger from 'logger';
 
-console.log(process.env.WELCOME_MESSAGE || 'Hello World!');
+logger.info(process.env.WELCOME_MESSAGE || 'Hello World!');

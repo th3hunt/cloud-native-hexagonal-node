@@ -21,13 +21,13 @@
   "license": "MIT",
   "author": "Stratos Pavlakis",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production babel src -d dist -s",
-    "dev": "nodemon src/index.js",
+    "dev": "nodemon src/index.js | pino-pretty -c -t",
     "jsdocs": "jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint --fix src",
-    "prebuild": "rimraf dist",
-    "pretest": "rimraf reports/unit",
     "start": "node dist/index.js",
+    "pretest": "rimraf reports/unit",
     "test": "jest -c jest/config.unit.js"
   },
   "husky": {
@@ -52,7 +52,8 @@
     }
   },
   "dependencies": {
-    "dotenv": "8.1.0"
+    "dotenv": "8.1.0",
+    "pino": "5.13.4"
   },
   "devDependencies": {
     "@babel/cli": "7.6.2",
@@ -77,6 +78,7 @@
     "lint-staged": ">=8",
     "minami": "1.2.3",
     "nodemon": "1.19.3",
+    "pino-pretty": "3.2.1",
     "prettier": "1.18.2",
     "rimraf": "3.0.0"
   },

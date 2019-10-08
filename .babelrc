@@ -14,7 +14,9 @@
       "module-resolver",
       {
         "root": ["./src"],
-        "alias": {}
+        "alias": {
+          "logger": "./src/logger"
+        }
       }
     ]
   ]
