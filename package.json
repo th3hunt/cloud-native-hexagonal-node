@@ -23,6 +23,7 @@
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "cross-env NODE_ENV=production babel src -d dist -s",
+    "cmd": "babel-node ./src/cli",
     "dev": "nodemon src/index.js | pino-pretty -c -t",
     "jsdocs": "jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint --fix src",
@@ -53,6 +54,7 @@
   },
   "dependencies": {
     "boom": "7.3.0",
+    "commander": "3.0.2",
     "dotenv": "8.1.0",
     "koa": "2.8.2",
     "koa-bodyparser": "4.2.1",
