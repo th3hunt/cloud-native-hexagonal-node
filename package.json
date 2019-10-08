@@ -24,6 +24,7 @@
   "scripts": {
     "build": "rimraf dist && cross-env NODE_ENV=production babel src -d dist -s",
     "dev": "nodemon src/index.js",
+    "jsdocs": "jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint --fix src",
     "start": "node dist/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -68,7 +69,9 @@
     "eslint-plugin-import": "2.18.2",
     "eslint-plugin-prettier": "3.1.1",
     "husky": ">=1",
+    "jsdoc": "3.6.3",
     "lint-staged": ">=8",
+    "minami": "1.2.3",
     "nodemon": "1.19.3",
     "prettier": "1.18.2",
     "rimraf": "3.0.0"

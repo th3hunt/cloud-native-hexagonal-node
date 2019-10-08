@@ -8,6 +8,9 @@ yarn-error.log*
 # Build output
 /dist
 
+# JS Docs
+/jsdoc
+
 # Runtime data
 pids
 *.pid
