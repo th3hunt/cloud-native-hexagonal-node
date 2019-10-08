@@ -1,0 +1,21 @@
+version: '3.1'
+services:
+  # Our service
+  hexagonal:
+    build: .
+    image: th3hunt/hexagonal
+    ports:
+      - 3000:3000
+    depends_on:
+      - rabbitmq
+    env_file: docker-compose.env
+
+  # RabbitMQ Broker
+  rabbitmq:
+    image: rabbitmq:3.7.8-management
+    env_file: docker-compose.env
+    ports:
+      - 5672:5672
+      - 15672:15672
+    labels:
+      NAME: broker
