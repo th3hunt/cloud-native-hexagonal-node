@@ -1,6 +1,5 @@
 {
   "name": "cloud-native-hexagonal-node",
-  "version": "1.0.0",
   "description": "A cloud native node microservice boilerplate based on the hexagonal architecture",
   "keywords": [
     "12-factor",
