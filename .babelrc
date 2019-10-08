@@ -13,7 +13,7 @@
     [
       "module-resolver",
       {
-        "root": ["./src"],
+        "root": ["./src", "./config"],
         "alias": {
           "logger": "./src/logger"
         }

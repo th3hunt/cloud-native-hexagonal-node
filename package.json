@@ -53,6 +53,7 @@
     }
   },
   "dependencies": {
+    "amqplib": "0.5.5",
     "boom": "7.3.0",
     "commander": "3.0.2",
     "dotenv": "8.1.0",

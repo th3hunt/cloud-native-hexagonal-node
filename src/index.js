@@ -7,6 +7,8 @@ import logger from 'logger';
 
 import EventEmitter from 'events';
 import createHttpServer from './http-server';
+import rabbit from '../config/rabbitmq';
+import Broker from './broker';
 import CommandBus from './domain/commandBus';
 import Registry from './domain/registry';
 
@@ -21,10 +23,22 @@ const commandBus = new CommandBus({
 
 async function terminate() {
   // shut down adapters one by one
+  logger.info('Closing RabbitMQ connections...');
+  await rabbit.disconnect();
   process.exit(1);
 }
 
 logger.info('Launching service in %s mode...', NODE_ENV);
+
+// Broker
+rabbit.connect().then(() => {
+  logger.info('Connected to RabbitMQ broker');
+  const broker = new Broker(rabbit, commandBus);
+  broker.start();
+  rabbit.once('reconnect', () => {
+    setTimeout(() => broker.start(), 0);
+  });
+});
 
 // HTTP server
 const port = process.env.HTTP_PORT || 3000;
