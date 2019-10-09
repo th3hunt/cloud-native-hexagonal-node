@@ -24,6 +24,7 @@
     "apidoc": "apidoc -i src/http-server/api -o apidoc",
     "build": "cross-env NODE_ENV=production babel src -d dist -s",
     "cmd": "babel-node ./src/cli",
+    "debug": "babel-node --inspect ./src/index.js",
     "dev": "nodemon src/index.js | pino-pretty -c -t",
     "jsdoc": "jsdoc --configure .jsdoc.json --verbose",
     "lint": "eslint --fix src",
