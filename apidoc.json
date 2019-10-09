@@ -1,0 +1,7 @@
+{
+  "name": "cloud-native-hexagonal-node",
+  "version": "1.0.0",
+  "description": "Cloud native Microservice boilerplate based on Hexagonal architecture",
+  "title": "cloud-native-hexagonal-node API docs",
+  "order": ["Health", "Reference"]
+}
